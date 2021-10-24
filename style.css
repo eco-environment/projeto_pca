@@ -34,13 +34,6 @@ body {
     text-align: center;
 }
 
-header {
-    grid-area: header;
-    border-radius:var(--main-radius);
-    padding-top: var(--main-padding);
-    border: solid #fff;
-}
-
 nav {
     grid-area: nav;
     border-radius:var(--main-radius);
