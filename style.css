@@ -42,9 +42,7 @@ main {
 }
 
 body {
-  margin: 0 auto;
-  max-width: 50%;
-  background-color: aliceblue;
+  background-color: #e9e9e9;
   /*background-image: linear-gradient(
     to right top,
     #051937,
@@ -58,11 +56,13 @@ body {
 }
 
 .container {
+  margin: 0 auto;
+  max-width: 1000px;
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1.2fr 0.2fr 1.5fr 1.2fr 0.8fr;
-  grid-template-areas: "nav nav nav nav" "sidebar main main main" "sidebar content1 content2 content3" "sidebar footer footer footer";
+  grid-template-areas: "nav nav nav nav" "main main main main" "content1 content2 content3 content4" "footer footer footer footer";
   grid-gap: 0.2rem;
   font-family: Inter, sans-serif;
   font-weight: 800;
@@ -73,9 +73,6 @@ body {
 }
 
 nav {
-  background-image: url(img/bg_eco_new.jpg);
-  background-size: 960px 100%;
-  background-repeat: no-repeat;
   grid-area: nav;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
@@ -84,10 +81,19 @@ nav {
   justify-content: flex-end;
 }
 
+.logo {
+  width: 300px;
+}
+
 /*Estilo Menu*/
 
 .menu-item {
   list-style: none;
+}
+
+.menu {
+  border-radius: 5px;
+  background-color: #1f5f7e;
 }
 
 .menu-item li {
@@ -96,7 +102,7 @@ nav {
 }
 
 .menu-item li a {
-  color: #333;
+  color: #fff;
   text-decoration: none;
   padding: 5px 10px;
   display: block;
@@ -104,7 +110,7 @@ nav {
 
 .menu-item li a:hover {
   border-radius: 5px;
-  background: #333;
+  background: #28a0dc;
   color: #fff;
   text-shadow: 0px 0px 5px #fff;
 }
@@ -116,7 +122,7 @@ nav {
   position: absolute;
   top: 25px;
   left: 0;
-  background-color: #fff;
+  background-color: #1f5f7e;
   display: none;
 }
 
@@ -132,16 +138,22 @@ nav {
 
 main {
   grid-area: main;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
-  border: solid #000;
+  margin-top: 10px;
 }
 
-.sidebar {
-  grid-area: sidebar;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
-  border: solid #000;
+main img {
+  width: 960px;
+  box-shadow: rgb(0 0 0 / 40%) 0px 4px 5px;
+}
+
+main h1,
+p {
+  font-weight: normal;
+  text-transform: none;
+}
+
+main p {
+  text-align: left;
 }
 
 .content1 {
@@ -165,11 +177,39 @@ main {
   border: solid #000;
 }
 
-footer {
-  grid-area: footer;
+.content4 {
+  grid-area: content4;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
   border: solid #000;
+}
+
+footer {
+  text-align: center;
+  color: #fff;
+  grid-area: footer;
+  margin-top: 20px;
+  border-top: 1px solid #fff;
+  background-color: #1f5f7e;
+  height: 120px;
+}
+
+footer h1 {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+footer p {
+  font-size: 12px;
+  margin-top: 10px;
+  font-weight: normal;
+  margin-left: 20px;
+}
+
+.email {
+  font-weight: normal;
+  text-transform: lowercase;
 }
 
 @media only screen and (max-width: 550px) {
