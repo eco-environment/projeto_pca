@@ -146,49 +146,50 @@ main img {
   box-shadow: rgb(0 0 0 / 40%) 0px 4px 5px;
 }
 
-main h1,
-p {
-  font-weight: normal;
-  text-transform: none;
-}
-
-main p {
-  text-align: left;
-}
-
 .content1 {
   grid-area: content1;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
-  border: solid #000;
 }
 
 .content2 {
   grid-area: content2;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
-  border: solid #000;
 }
 
 .content3 {
   grid-area: content3;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
-  border: solid #000;
 }
 
 .content4 {
   grid-area: content4;
-  border-radius: var(--main-radius);
-  padding-top: var(--main-padding);
-  border: solid #000;
+}
+
+.content1,
+.content2,
+.content3,
+.content4 {
+  margin-top: 20px;
+}
+
+.content1 img,
+.content2 img,
+.content3 img,
+.content4 img {
+  box-shadow: rgb(0 0 0 / 40%) 0px 4px 5px;
+  border-radius: 5px;
+}
+
+.content1:hover,
+.content2:hover,
+.content3:hover,
+.content4:hover {
+  transform: scale(1.05, 1.05);
+  z-index: 9;
 }
 
 footer {
   text-align: center;
   color: #fff;
   grid-area: footer;
-  margin-top: 20px;
+  margin-top: 400px;
   border-top: 1px solid #fff;
   background-color: #1f5f7e;
   height: 120px;
